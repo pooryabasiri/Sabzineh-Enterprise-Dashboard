@@ -87,7 +87,7 @@ function renderAuthOverlay(wrapper) {
 
         <!-- Social -->
         <div class="auth-social grid grid-cols-3 gap-2.5">
-          <button type="button" class="auth-social-btn flex justify-center items-center rounded-xl border border-white/10 bg-white/3 text-inherit p-3 font-extrabold cursor-pointer transition duration-200 hover:bg-white/10" data-provider="microsoft">
+          <button type="button" class="auth-social-btn flex justify-center items-center rounded-xl border border-white/10 bg-white/3 text-inherit p-3 font-extrabold cursor-pointer transition duration-200 hover:bg-white/10" data-provider="apple">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
             <path d="M16.37 12.72c.02 2.48 2.17 3.31 2.19 3.32-.02.06-.34 1.17-1.12 2.31-.67.98-1.37 1.95-2.46 1.97-1.07.02-1.41-.64-2.64-.64-1.23 0-1.61.62-2.62.66-1.05.04-1.85-1.05-2.53-2.02-1.38-1.99-2.44-5.61-1.02-8.07.7-1.22 1.96-1.99 3.32-2.01 1.03-.02 2 .69 2.64.69.64 0 1.84-.85 3.1-.72.53.02 2.02.22 2.98 1.63-.08.05-1.78 1.04-1.76 3.08zM14.47 4.5c.56-.68.94-1.63.84-2.58-.81.03-1.79.54-2.37 1.22-.52.6-.98 1.56-.86 2.48.91.07 1.84-.46 2.39-1.12z"/>
             </svg>
