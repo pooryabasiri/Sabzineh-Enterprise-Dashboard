@@ -517,26 +517,6 @@ select option {
   pointer-events: none;
 }
 
-.auth-card {
-  width: 100%;
-  max-width: 540px;
-  border-radius: 40px;
-  padding-top: 5rem;
-  padding-bottom: 1.5rem;
-  background:
-    linear-gradient(180deg,
-      rgba(36, 32, 28, .95),
-      rgba(29, 25, 22, .92));
-  border: 1px solid rgba(255, 255, 255, .05);
-  backdrop-filter: blur(30px);
-  box-shadow:
-    0 35px 120px rgba(0, 0, 0, .45),
-    inset 0 1px 0 rgba(255, 255, 255, .04);
-  color: #f5ede3;
-  overflow: hidden;
-  position: relative;
-}
-
 .auth-card::before {
   content: "";
   position: absolute;

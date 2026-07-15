@@ -11,7 +11,11 @@ function renderAuthOverlay(wrapper) {
     <div class="auth-backdrop"></div>
 
     <div class="auth-shell relative z-2 w-[min(540px,100%)]">
-      <div class="auth-card flex flex-col items-center" id="auth-card">
+      <div class="auth-card flex flex-col items-center relative w-full max-w-160 overflow-hidden text-[#f5ede3] 
+      border border-white/5 backdrop-blur-[30px] bg-linear-to-b from-[#24201c]/95 to-[#1d1916]/92 shadow-[0_35px_120px_rgba(0,0,0,.45),inset_0_1px_0_rgba(255,255,255,.04)]
+          max-h-[95vh] lg:max-h-220 rounded-3xl md:rounded-4xl lg:rounded-[40px]
+          pt-8 md:pt-16 lg:pt-20 pb-4 md:pb-5 lg:pb-6" id="auth-card">
+          
         <!-- Status -->
         <div class="auth-status absolute right-6 top-6 flex items-center gap-3 mb-5">
           <span class="auth-status-dot w-2.5 h-2.5 rounded-full bg-[#7b8f3b] shadow-[0_0_0_0_rgba(123,143,59,.55)] animate-[authPulse_2.2s_infinite]"></span>
