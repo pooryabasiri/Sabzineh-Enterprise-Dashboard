@@ -83,7 +83,7 @@ function renderSettings() {
       </button>
     </div>
   `;
-  themeCard.querySelector("#theme-light").addEventListener("click", () => { if (appState.theme !== "light") toggleTheme(); });
+  // themeCard.querySelector("#theme-light").addEventListener("click", () => { if (appState.theme !== "light") toggleTheme(); });
   themeCard.querySelector("#theme-dark").addEventListener("click", () => { if (appState.theme !== "dark") toggleTheme(); });
   rightCol.appendChild(themeCard);
 
