@@ -12,26 +12,26 @@ function loadScript(src) {
 }
 
 const legacyScripts = [
-    "src/js/data.js",
-    "src/js/store.js",
-    "src/js/helpers.js",
-    "src/js/icons.js",
-    "src/js/state.js",
-    "src/js/components.js",
+    "/js/data.js",
+    "/js/store.js",
+    "/js/helpers.js",
+    "/js/icons.js",
+    "/js/state.js",
+    "/js/components.js",
 
-    "src/js/auth.js",
+    "/js/auth.js",
 
-    "src/js/pages/dashboard.js",
-    "src/js/pages/analytics.js",
-    "src/js/pages/orders.js",
-    "src/js/pages/products.js",
-    "src/js/pages/customers.js",
-    "src/js/pages/messages.js",
-    "src/js/pages/reports.js",
-    "src/js/pages/calendar.js",
-    "src/js/pages/settings.js",
+    "/js/pages/dashboard.js",
+    "/js/pages/analytics.js",
+    "/js/pages/orders.js",
+    "/js/pages/products.js",
+    "/js/pages/customers.js",
+    "/js/pages/messages.js",
+    "/js/pages/reports.js",
+    "/js/pages/calendar.js",
+    "/js/pages/settings.js",
 
-    "src/js/app.js",
+    "/js/app.js",
 ];
 
 // ترتیب مهمه
