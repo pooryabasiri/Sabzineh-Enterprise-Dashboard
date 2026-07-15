@@ -1,0 +1,22 @@
+{
+  "name": "sabzineh-dashboard",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.2",
+    "tailwindcss": "^4.3.2",
+    "vite": "^8.1.1"
+  },
+  "dependencies": {
+    "@fontsource/vazirmatn": "^5.2.8",
+    "chart.js": "^4.5.1",
+    "jalaali-js": "^2.0.0",
+    "swiper": "^14.0.1"
+  }
+}
