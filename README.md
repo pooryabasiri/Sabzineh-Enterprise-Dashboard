@@ -3,8 +3,7 @@ Sabzineh Enterprise Dashboard — Modern Business Management Dashboard
   A modern enterprise dashboard built entirely with Vanilla JavaScript, HTML5, and Tailwind CSS — without using frontend frameworks.
 
 Live Demo
-
-  https://YOUR-VERCEL-LINK.vercel.app/
+  https://sabzineh-enterprise-dashboard.vercel.app/
 
 Overview
 
