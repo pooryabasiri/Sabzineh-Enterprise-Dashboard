@@ -10,30 +10,36 @@ function renderAuthOverlay(wrapper) {
   overlay.innerHTML = `
     <div class="auth-backdrop"></div>
 
-    <div class="auth-shell relative z-2 w-[min(540px,100%)]">
-      <div class="auth-card flex flex-col items-center relative w-full max-w-160 overflow-hidden text-[#f5ede3] 
+    <div class="auth-shell z-2 w-[min(540px,100%)]">
+      <div class="auth-card flex flex-col items-center w-full max-w-160 overflow-hidden text-[#f5ede3] 
       border border-white/5 backdrop-blur-[30px] bg-linear-to-b from-[#24201c]/95 to-[#1d1916]/92 shadow-[0_35px_120px_rgba(0,0,0,.45),inset_0_1px_0_rgba(255,255,255,.04)]
           max-h-[95vh] lg:max-h-220 rounded-3xl md:rounded-4xl lg:rounded-[40px]
-          pt-8 md:pt-16 lg:pt-20 pb-4 md:pb-5 lg:pb-6" id="auth-card">
+          pt-4 md:pt-6 lg:pt-8 pb-4 md:pb-6 lg:pb-8" id="auth-card">
           
         <!-- Status -->
-        <div class="auth-status absolute right-6 top-6 flex items-center gap-3 mb-5">
+        <div class="auth-status grid  grid-cols-[3fr_1fr] w-full gap-3 mb-8">
+          
+          <div class="auth-status flex items-center ms-2 md:ms-8">
           <span class="auth-status-dot w-2.5 h-2.5 rounded-full bg-[#7b8f3b] shadow-[0_0_0_0_rgba(123,143,59,.55)] animate-[authPulse_2.2s_infinite]"></span>
-          <div>
+            <div class="ms-4">
             <p class="auth-status-title text-sm font-extrabold">سیستم آماده ورود </p>
-            <p class="auth-status-sub text-xs opacity-70 mt-0.5">سیستم قفل است — برای ادامه وارد شوید</p>
+            <p class="auth-status-sub text-xs opacity-70 mt-1">سیستم قفل است — برای ادامه وارد شوید</p>
+            </div>
+          </div>
+          <div class="flex justify-end md:me-8">
+            <div class="auth-logo w-12 md:w-16 h-12 md:h-16 rounded-2xl flex items-center justify-center text-[#b9d56b] border border-[rgba(123,143,59,.22)] bg-[linear-gradient(145deg,rgba(123,143,59,.18),rgba(123,143,59,.08))] shadow-[inset_0_1px_0_rgba(255,255,255,.05),0_14px_40px_rgba(123,143,59,.15)]">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="w-6 h-6">
+                <path d="M12 3c-2.5 3.5-6 5.5-6 9a6 6 0 0 0 12 0c0-3.5-3.5-5.5-6-9z"/>
+              </svg>
+            </div>
           </div>
         </div>
 
         <!-- Header -->
-        <div class="auth-header text-center mb-5">
-          <div class="auth-logo w-19 h-19 mt-0 mx-auto mb-6 rounded-3xl flex items-center justify-center text-[#b9d56b] border border-[rgba(123,143,59,.22)] bg-[linear-gradient(145deg,rgba(123,143,59,.18),rgba(123,143,59,.08))] shadow-[inset_0_1px_0_rgba(255,255,255,.05),0_14px_40px_rgba(123,143,59,.15)]">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="w-6 h-6">
-              <path d="M12 3c-2.5 3.5-6 5.5-6 9a6 6 0 0 0 12 0c0-3.5-3.5-5.5-6-9z"/>
-            </svg>
-          </div>
-          <h1 class="text-4xl font-black tracking-[-.04em] mb-3">خوش آمدید</h1>
-          <p class="max-w-68 mx-auto text-sm leading-loose opacity-[.58]">برای ورود به داشبورد هوشمند سبزینه، اطلاعات خود را وارد کنید</p>
+        <div class="auth-header text-center mb-4">
+          
+          <h1 class="text-2xl md:text-4xl font-black tracking-[-.04em] mb-3">خوش آمدید</h1>
+          <p class="max-w-68 mx-auto text-xs md:text-sm leading-loose opacity-[.58]">برای ورود به داشبورد هوشمند سبزینه، اطلاعات خود را وارد کنید</p>
         </div>
 
         <!-- Form -->
@@ -75,13 +81,16 @@ function renderAuthOverlay(wrapper) {
             <button type="button" class="auth-link hover:underline border-none bg-transparent text-[#7b8f3b] font-bold cursor-pointer text-xs transition hover:opacity-80" id="auth-forgot">فراموشی رمز عبور؟</button>
           </div>
 
-          <button type="submit" class="auth-btn-primary w-full h-14.5 rounded-[18px] border-none py-[0.9rem] px-4 text-sm font-extrabold cursor-pointer transition duration-200 hover:scale-[1.02] active:scale-95" id="auth-submit">
+          <div class="flex gap-x-4">
+          <button type="submit" class="auth-btn-primary w-full h-12 rounded-2xl border-none py-[0.9rem] px-4 text-sm font-extrabold cursor-pointer transition duration-200 hover:scale-[1.02] active:scale-95" id="auth-submit">
             ورود به داشبورد
           </button>
 
-          <button type="button" class="auth-btn-secondary w-full h-14.5 rounded-2xl border-none py-[0.9rem] px-4 text-sm font-extrabold cursor-pointer transition duration-200 hover:scale-[1.02] active:scale-95" id="auth-guest">
+          <button type="button" class="auth-btn-secondary w-full h-12 rounded-2xl border-none py-[0.9rem] px-4 text-sm font-extrabold cursor-pointer transition duration-200 hover:scale-[1.02] active:scale-95" id="auth-guest">
             ورود مهمان
           </button>
+          </div>
+
         </form>
 
         <!-- Divider -->
@@ -91,17 +100,17 @@ function renderAuthOverlay(wrapper) {
 
         <!-- Social -->
         <div class="auth-social grid grid-cols-3 gap-2.5">
-          <button type="button" class="auth-social-btn flex justify-center items-center rounded-xl border border-white/10 bg-white/3 text-inherit p-3 font-extrabold cursor-pointer transition duration-200 hover:bg-white/10" data-provider="apple">
+          <button type="button" class="auth-social-btn flex justify-center items-center rounded-xl border border-white/10 bg-white/3 text-inherit p-2.75 font-extrabold cursor-pointer transition duration-200 hover:bg-white/10" data-provider="apple">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
             <path d="M16.37 12.72c.02 2.48 2.17 3.31 2.19 3.32-.02.06-.34 1.17-1.12 2.31-.67.98-1.37 1.95-2.46 1.97-1.07.02-1.41-.64-2.64-.64-1.23 0-1.61.62-2.62.66-1.05.04-1.85-1.05-2.53-2.02-1.38-1.99-2.44-5.61-1.02-8.07.7-1.22 1.96-1.99 3.32-2.01 1.03-.02 2 .69 2.64.69.64 0 1.84-.85 3.1-.72.53.02 2.02.22 2.98 1.63-.08.05-1.78 1.04-1.76 3.08zM14.47 4.5c.56-.68.94-1.63.84-2.58-.81.03-1.79.54-2.37 1.22-.52.6-.98 1.56-.86 2.48.91.07 1.84-.46 2.39-1.12z"/>
             </svg>
           </button>
-          <button type="button" class="auth-social-btn flex justify-center items-center rounded-xl border border-white/10 bg-white/3 text-inherit p-3 font-extrabold cursor-pointer transition duration-200 hover:bg-white/10" data-provider="github">
+          <button type="button" class="auth-social-btn flex justify-center items-center rounded-xl border border-white/10 bg-white/3 text-inherit p-2.75 font-extrabold cursor-pointer transition duration-200 hover:bg-white/10" data-provider="github">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
               <path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2.17c-3.2.7-3.88-1.54-3.88-1.54-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.69.08-.69 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.67 1.25 3.32.96.1-.74.4-1.25.72-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.27 1.18-3.08-.12-.29-.51-1.47.11-3.07 0 0 .96-.31 3.14 1.18a10.9 10.9 0 0 1 5.72 0c2.18-1.49 3.14-1.18 3.14-1.18.62 1.6.23 2.78.11 3.07.73.81 1.18 1.83 1.18 3.08 0 4.41-2.69 5.39-5.25 5.67.41.36.77 1.08.77 2.18v3.23c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/>
             </svg>
           </button>
-          <button type="button" class="auth-social-btn flex justify-center items-center rounded-xl border border-white/10 bg-white/3 text-inherit p-3 font-extrabold cursor-pointer transition duration-200 hover:bg-white/10" data-provider="google">
+          <button type="button" class="auth-social-btn flex justify-center items-center rounded-xl border border-white/10 bg-white/3 text-inherit p-2.75 font-extrabold cursor-pointer transition duration-200 hover:bg-white/10" data-provider="google">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="24" height="24">
               <path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.3 36 24 36c-6.6 0-12-5.4-12-12S17.4 12 24 12c3 0 5.7 1.1 7.8 3l5.7-5.7C34.1 6.1 29.3 4 24 4 13 4 4 13 4 24s9 20 20 20 20-9 20-20c0-1.3-.1-2.3-.4-3.5z"/>
               <path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.6 19 12 24 12c3 0 5.7 1.1 7.8 3l5.7-5.7C34.1 6.1 29.3 4 24 4c-7.7 0-14.3 4.3-17.7 10.7z"/>
